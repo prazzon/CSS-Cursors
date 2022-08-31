@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+} 
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: rgb(8, 8, 8);
+    color: #fff; 
+    padding: 10rem;
+    background-image: repeating-linear-gradient(15deg, hsl(142,0%,8%) 0px,hsl(142,0%,8%) 12px,transparent 13px),repeating-linear-gradient(155deg, hsl(142,0%,8%) 0px,hsl(142,0%,8%) 12px,transparent 13px),linear-gradient(90deg, hsla(96,0%,71%,1),hsla(111,0%,71%,1));    
+    background-attachment: fixed;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    margin-bottom: -3rem;
+}
+
+a,
+a:active,
+a:visited {
+    color: #f1e7a7;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 3rem;
+    align-items: flex-end;
+    gap: 2rem;
+    color: #f1e7a7;
+    overflow: hidden;
+}
+
+.logo {
+    width: 5rem;
+    animation: slide-in-left 0.5s 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.logo-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 5rem;
+    animation: slide-in-bottom 0.5s 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.header-text {
+    margin-left: auto;
+    font-size: 2rem;
+    animation: slide-in-bottom 0.7s .9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.cursors-container {
+    padding-top: 8rem;
+}
+
+.cursors-title {
+    font-size: 3rem;
+    color: rgb(215, 215, 215);
+}
+
+.cursors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem 4rem;
+    margin: 4rem 0;
+}
+
+.cursor-item {
+    /* font-family : Monaco, monospace;  */
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 2rem 3rem;
+    width: calc(100% / 5 - 4rem);
+    text-align: center;
+    border-radius : 1.5rem; 
+    font-size : 1.6rem;
+    color : rgb(233, 236, 239); 
+    background-color : rgb(52, 58, 64);
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.cursor-item:hover {
+    transform: scale(1.05);
+}
+
+.copied,
+.copied:hover {
+    background-color: #578844;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
