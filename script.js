@@ -1,26 +1,25 @@
 // Select all "cursor-item" class elements
-var cursorItems = document.getElementsByClassName("cursor-item");
+const cursorItems = document.getElementsByClassName("cursor-item");
+
+var itemText = "";
 
 // Add "click" event to all items
 for (const item of cursorItems) {
     item.addEventListener("click", function () {
-        // Get text of clicked item
-        var text = item.innerText.toLowerCase();
+        // Update text of clicked item
+        itemText = item.innerText !== "Copied!" ? item.innerText : itemText;
 
-        // Change text to css property
-        text = `cursor: ${text};`;
-
-        // Copy text to the clipboard
-        navigator.clipboard.writeText(text)
+        // Copy code text to clipboard
+        navigator.clipboard.writeText(`cursor: ${itemText.toLowerCase()};`)
             .then(function () {
                 // Change item's text to "Copied" for 2 seconds
-                itemText = item.innerText;
+                var text = itemText;
                 item.innerText = "Copied!";
-                item.classList.toggle("copied");
+                item.classList.add("copied");
 
                 setTimeout(function () {
-                    item.innerText = itemText;
-                    item.classList.toggle("copied");
+                    item.innerText = text;
+                    item.classList.remove("copied");
                 }, 1000);
             })
             .catch(function (err) {
