@@ -10,7 +10,7 @@ CSS Cursors is a web app that helps developers copy and paste CSS cursor propert
 
 ## Live Demo
 
-You can try out the app here: [link](https://css-cursor-properties.netlify.app)
+You can try out the app [here](https://css-cursor-properties.netlify.app)
 
 ## Installation
 
