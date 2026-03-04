@@ -1,6 +1,6 @@
 # CSS Cursors
 
-CSS Cursors is a web app that helps developers preview, copy and paste CSS cursor properties.
+CSS Cursors is a web application that helps developers preview, copy and paste CSS cursor properties.
 
 ## Features
 
